@@ -43,16 +43,16 @@ private fun MainComponent(
 		bottomBar = {
 			BottomAppBar(
 				actions = {
-					IconButton(onClick = { navController.navigate("tasks") }) {
+					IconButton(onClick = { navController.navigate("tasks") { launchSingleTop = true } }) {
 						Icon(Icons.TwoTone.FormatListBulleted, "Tasks")
 					}
 					
-					IconButton(onClick = { navController.navigate("delayedTasks") }) {
+					IconButton(onClick = { navController.navigate("delayedTasks") { launchSingleTop = true } }) {
 						Icon(Icons.TwoTone.History, "Delayed Tasks")
 					}
 				},
 				floatingActionButton = {
-					FloatingActionButton(onClick = { navController.navigate("createTask") }) {
+					FloatingActionButton(onClick = { navController.navigate("createTask") { launchSingleTop = true } }) {
 						Icon(Icons.TwoTone.Add, "Add a Task")
 					}
 				}

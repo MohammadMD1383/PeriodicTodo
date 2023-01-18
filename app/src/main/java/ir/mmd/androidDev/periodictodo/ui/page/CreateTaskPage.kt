@@ -73,7 +73,7 @@ private fun LightPreview() {
 @Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun DarkPreview() {
-	PeriodicTodoTheme(false) {
+	PeriodicTodoTheme(true) {
 		CreateTaskPage({})
 	}
 }

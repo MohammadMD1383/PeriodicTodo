@@ -19,12 +19,12 @@ data class TaskViewModel(
 		var words = 0
 		
 		while (i < description.length) {
-			if (description[i] == ' ') {
+			if (description[i] in " \t\n") {
 				ti = i
 				
 				do {
 					i++
-				} while (i < description.length && description[i] == ' ')
+				} while (i < description.length && description[i] in " \t\n")
 				
 				if (++words == maxWords) {
 					break

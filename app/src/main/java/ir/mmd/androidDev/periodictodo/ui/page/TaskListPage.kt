@@ -32,7 +32,7 @@ fun TaskListPage(
 
 @Preview(showBackground = true, showSystemUi = true, backgroundColor = 0xFFFFFFFF)
 @Composable
-fun LightPreview() {
+private fun LightPreview() {
 	PeriodicTodoTheme(false) {
 		TaskListPage(sampleTaskViewModelList)
 	}
@@ -40,7 +40,7 @@ fun LightPreview() {
 
 @Preview(showBackground = true, showSystemUi = true, backgroundColor = 0xFF000000)
 @Composable
-fun DarkPreview() {
+private fun DarkPreview() {
 	PeriodicTodoTheme(true) {
 		TaskListPage(sampleTaskViewModelList)
 	}

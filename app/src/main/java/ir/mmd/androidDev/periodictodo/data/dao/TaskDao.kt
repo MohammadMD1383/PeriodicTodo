@@ -2,6 +2,7 @@ package ir.mmd.androidDev.periodictodo.data.dao
 
 import androidx.room.*
 import ir.mmd.androidDev.periodictodo.data.entity.TaskEntity
+import ir.mmd.androidDev.periodictodo.data.entity.TaskHistory
 
 @Dao
 interface TaskDao {
@@ -16,4 +17,8 @@ interface TaskDao {
 	
 	@Delete
 	suspend fun remove(task: TaskEntity)
+	
+	@Transaction
+	@Query("SELECT * FROM tasks WHERE id=:taskId")
+	suspend fun historyOf(taskId: Long): TaskHistory
 }
